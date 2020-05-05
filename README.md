@@ -8,7 +8,7 @@ Today you will be adding audio comments.
 
 ## Instructions
 
-Create a new branch in the repository called `audioComments` and work off of it from where you left off yesterday.
+Create a new branch in the repository called `audio` and work off of it from where you left off yesterday.
 
 You're welcome to fulfill these instructions however you want. If you'd like suggestions on how to implement something, open the disclosure triangle and there are some suggestions for most of the instructions.
 
