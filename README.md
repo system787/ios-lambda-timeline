@@ -12,7 +12,24 @@ Create a new branch in the repository called `audio` and work off of it from whe
 
 You're welcome to fulfill these instructions however you want. If you'd like suggestions on how to implement something, open the disclosure triangle and there are some suggestions for most of the instructions.
 
-1. Create UI that allows the user to create an audio comment. The UI should allow the user to record, stop, cancel, and send the recording.
+### Audio UI Prototyping
+
+Your first goal is to work on the audio functionality to prototype how it should behave. Building and testing with Firebase is slow, so you can speed up your development by working in issolation on this feature change.
+
+1. Create a new Xcode project for prototyping called `AudioComments`
+2. Create UI that allows the user to create an audio comment. 
+    1. The UI should allow the user to record, stop, cancel, and send the recording.
+3. Create Table View UI that displays audio comments in a custom table view cell.
+    1. The UI should allow the user to play, pause, and scrub through a recording. 
+    
+    
+For inspiration, look at how the Phone app works with Voicemail, or how the Voice Memos app works.
+
+### Lambda Timeline Audio Integration
+
+Integrate your custom recording UI into the Lambda Timeline project.
+
+1. Users should be able to create an audio comment (in addition to a text comment).
     <details><summary>Recording UI Suggestions</summary>
     <p>
 
