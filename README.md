@@ -8,17 +8,35 @@ Today you will be adding video posts.
 
 ## Instructions
 
-Create a new branch in the repository called `videoPosts` and work off of it from where you left off yesterday.
+Create a new branch in the repository called `video` and work off of it from where you left off yesterday.
 
 You're welcome to fulfill these instructions however you want. There are a few suggestions to help you along if you need them.
 
-1. Create UI that allows the user to create a video post. The UI should allow the user to record a video. Once the video has been recorded, it should play back the video (the playback can be looped if you want), allow the user to add a title just like in an image post, then post it.
+## Part 1: VideoPost Prototype
+
+Create a new Xcode project with the UI and functionality to capture and save a video to a URL that can be shared.
+
+1.  The UI should allow the user to record a video. 
+    1. Once the video has been recorded, it should play back the video (the playback can be looped if you want).
+    2. The user can add a title just like in an image post and can post it (to a collection view)
+    3. Optional: There can be a button to retake the video before posting (discard the old video file using the FileManager).
+2. A video post should be displayed in a custom Collection View cell (there can be multiple video posts)
+3. You can decide how you want to handle preview and playback controls (Looping Instagram Story style with an `x` button, or QuickTime style with playback and seek controls)
+
+### Tips
+
+1. You may take the `CameraViewController` used in the guided project as a base. 
+2. You should be able to play the video using the `AVPlayer` and `AVPlayerLayer` classes.
+3. You can reuse the special `UIView` layer backed classes to live preview the camera, as well as the video playback.
+4. Optional: Grab the first frame of video to use when displaying a video post (alternatively you can use a placeholder image).
+
+## Part 2: Video Posts on Lambda Timeline
+1. Integrate your UI to create a video post onto your Firebase backend.
+
     <details><summary>Recording UI Suggestions</summary>
     <p>
 
-      - You may take the `CameraViewController` used in the guided project as a base. You will need to modify it so the video doesn't get stored to the user's photo library, but instead you can use the url that the `didFinishRecordingTo outPutFileURL: URL` method gives you back to send the video data to Firebase
-      - For information on how to play back the video, refer to `AVPlayer` and `AVPlayerLayer` in the documentation. Of course you're welcome to google for more information, but familiarize yourself with these objects first.
-
+      - If you use the `CameraViewController` you may need to modify it so the video doesn't get stored to the user's photo library. Instead you can use the url that the `didFinishRecordingTo outPutFileURL: URL` method gives you back to send the video data to Firebase
     </p>
     </details>
 2. Add a new case to the `MediaType` enum in the Post.swift file for videos. Take a look at the memberwise initializer for the Post. Make sure that it takes in a `MediaType` and sets `mediaType` correctly.
